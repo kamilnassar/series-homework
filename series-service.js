@@ -54,3 +54,12 @@ export const getCreatorsFrom = (series, country) => {
 export const sortByStartYear = series => {
   return [...series].sort((a, b) => a.startYear - b.startYear);
 };
+
+//---------------------C---------------------
+
+//function #9
+export const renameSeries = (series, id, newTitle) => {
+  return series.map(show => 
+    show.id === id ? { ...show, title: newTitle } : show
+  );
+};
