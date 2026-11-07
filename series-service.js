@@ -73,3 +73,26 @@ export const addSeason = (series, id, season) => {
       : show
   );
 };
+
+// function  #11
+
+export const addEpisode = (series, showId, seasonNumber, episode) => {
+  return series.map(show => {
+    if (show.id !== showId) return show;
+
+    const updatedSeasons = show.seasons.map(season => {
+      if (season.number !== seasonNumber) return season;
+
+      return {
+        ...season,
+        episodes: [...season.episodes, episode]
+      };
+    });
+
+    return {
+      ...show,
+      seasons: updatedSeasons
+    };
+  });
+};
+
