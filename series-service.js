@@ -24,3 +24,13 @@ export const getNextSeasonYear = (show) => {
 export const getById = (series, id) => {
   return series.find(show => show.id === id);
 };
+
+//function #5
+export const getSeasonsCount = series => {
+  return series.map(show => ({
+    title: show.title,
+    seasons: show.seasons ? show.seasons.length : 0
+  }));
+};
+
+//function #6
