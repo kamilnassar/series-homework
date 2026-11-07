@@ -42,3 +42,10 @@ export const hasTopEpisode = (show, minRating) => {
     season.episodes.some(episode => episode.rating >= minRating)
   );
 };
+
+//function #7
+export const getCreatorsFrom = (series, country) => {
+  return series
+    .filter(show => show.creator && show.creator.country === country)
+    .map(show => show.creator.name);
+};
