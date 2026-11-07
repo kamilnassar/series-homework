@@ -49,3 +49,8 @@ export const getCreatorsFrom = (series, country) => {
     .filter(show => show.creator && show.creator.country === country)
     .map(show => show.creator.name);
 };
+
+//function #8
+export const sortByStartYear = series => {
+  return [...series].sort((a, b) => a.startYear - b.startYear);
+};
