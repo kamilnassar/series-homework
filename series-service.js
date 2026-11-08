@@ -96,3 +96,5 @@ export const addEpisode = (series, showId, seasonNumber, episode) => {
   });
 };
 
+
+//all bugs fixed
